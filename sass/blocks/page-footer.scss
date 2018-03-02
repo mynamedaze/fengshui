@@ -1,0 +1,135 @@
+.page-footer {
+  border-top: 1px solid #303143;
+  @media #{$max-mobile-width} {
+    padding-top: 27px;
+    padding-bottom: 60px;
+  }
+  @media #{$min-tablet-width} {
+    padding-top: 24px;
+    padding-bottom: 30px;
+  }
+  @media #{$min-desktop-width} {
+    padding-bottom: 20px;
+  }
+}
+.page-footer__main-nav {
+  @include section-width;
+  @include paddings;
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+  @media #{$min-desktop-width} {
+    margin-left: 109px;
+    justify-content: flex-start !important;
+  }
+}
+.page-footer__main-nav-item {
+  font-size: 1.6rem;
+  font-weight: 400 !important;
+}
+.page-footer__wrapper {
+  @include section-width;
+  @include paddings;
+  @media #{$min-tablet-width} {
+    display: flex;
+    margin-right: 75px;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+  @media #{$min-desktop-width} {
+    margin-left: 109px;
+  }
+}
+
+.call-field {
+  @media #{$min-tablet-width} {
+    order: 3;
+  }
+  @media #{$min-desktop-width} {
+    transform: translateY(-58px);
+  }
+}
+.page-footer__callback-link {
+  display: block;
+  color: $text-alt-color;
+  text-decoration: underline;
+  @media #{$max-mobile-width} {
+    font-size: 1.6rem;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 1.5rem;
+  }
+}
+.page-footer__phone-link {
+  font-size: 1.8rem;
+  display: block;
+  @media #{$max-mobile-width} {
+    margin-top: 14px;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: 10px;
+  }
+  @media #{$min-desktop-width} {
+    margin-top: 7px;
+  }
+}
+.page-footer__mail-link {
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+  @media #{$min-tablet-width} {
+    display: none;
+  }
+  @media #{$min-desktop-width} {
+    display: block;
+    font-size: 1.6rem;
+    margin-top: 17px;
+  }
+}
+.page-footer__logo-field {
+  @media #{$min-tablet-width} {
+    order: 1;
+  }
+  @media #{$min-desktop-width} {
+    margin-right: 36px;
+  }
+}
+.page-footer__title-link {
+  font-size: 2.1rem;
+  display: block;
+  font-family: "futurapt", "Arial", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  @media #{$max-mobile-width} {
+    margin-top: 35px;
+  }
+}
+.page-footer__copyright {
+  display: block;
+  font-size: 1.6rem;
+  color: $invis-text;
+  @media #{$max-mobile-width} {
+    margin-top: 10px;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: 5px;
+  }
+}
+.page-footer__confid-link {
+  text-decoration: underline;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: $invis-text;
+  display: block;
+  @media #{$max-mobile-width} {
+    margin-top: 20px;
+  }
+  @media #{$min-tablet-width} {
+    order: 2;
+    width: 182px;
+  }
+  @media #{$min-desktop-width} {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}

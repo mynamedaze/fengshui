@@ -1,0 +1,80 @@
+.burger {
+  @media #{$max-mobile-width} {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #001c23;
+    width: 100%;
+    z-index: 2;
+    padding-left: 15px;
+    padding-top: 29px;
+    padding-right: 15px;
+    padding-bottom: 72px;
+    display: none;
+  }
+  @media #{$min-tablet-width} {
+    display: none;
+  }
+}
+.burger__wrapper {
+  @include section-width;
+  @include paddings;
+}
+.burger__btn {
+  @media #{$max-mobile-width} {
+    width: 30px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-image: url("/img/burger.png");
+    background-color: transparent;
+    border: 0px solid transparent;
+  }
+}
+.burger__title {
+  font-family: "futurapt", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 2.1rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: -27px;
+}
+.burger__list {
+  padding-left: 0;
+  margin-top: 80px;
+}
+.burger__item {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-top: 32px;
+}
+.burger__callback-btn {
+  @media #{$max-mobile-width} {
+    width: 203px;
+    height: 5.4rem;
+    border-radius: 2.7rem;
+    background-color: transparent;
+    color: #0fefde;
+    border: 1px solid #0fefde;
+    margin-top: 60px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    padding-left: 27px;
+    position: relative;
+  }
+}
+.burger__callback-btn::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url("/img/phone_icon.svg");
+  left: 23px;
+  top: 50%;
+  transform: translateY(-7px);
+}

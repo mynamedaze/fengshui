@@ -1,0 +1,109 @@
+.store__wrapper {
+  @include section-width;
+  @include paddings;
+  padding-bottom: 20px;
+  @media #{$max-mobile-width} {
+    padding-top: 29px;
+  }
+  @media #{$min-tablet-width} {
+    padding-top: 62px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 47px;
+  }
+}
+.store__title {
+  text-align: center;
+  color: #0fefde;
+  margin-top: 0;
+  @media #{$max-mobile-width} {
+    font-size: 2.8rem;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 4rem;
+  }
+}
+.store__title-text {
+  position: relative;
+}
+.store__title-text::before {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url("/img/icon_shop.svg");
+  @media #{$max-mobile-width} {
+    left: -33px;
+    top: 5px;
+    width: 22px;
+    height: 22px;
+  }
+  @media #{$min-tablet-width} {
+    left: -45px;
+    top: 9px;
+    width: 30px;
+    height: 30px;
+  }
+}
+.store__content {
+  @media #{$min-desktop-width} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.store__bigimg-field {
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+  @media #{$min-tablet-width} {
+    @media #{$max-tablet-width} {
+      display: none;
+    }
+  }
+  @media #{$min-desktop-width} {
+    flex-shrink: 0;
+    margin-left: -85px;
+    margin-right: 60px;
+    width: 606px;
+    height: 537px;
+    transform: translateY(30px);
+  }
+}
+.store__list {
+  padding-left: 0;
+  @media #{$max-mobile-width} {
+    margin-bottom: 50px;
+  }
+  @media #{$min-tablet-width} {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: -60px;
+    margin-bottom: 65px;
+  }
+}
+.store__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media #{$max-mobile-width} {
+    margin-top: 35px;
+  }
+  @media #{$min-tablet-width} {
+    width: 48%;
+    margin-top: 86px;
+  }
+  @media #{$min-desktop-width} {
+    margin-top: 100px;
+  }
+}
+.store__catalog-btn {
+  position: relative;
+  z-index: 5;
+  display: block;
+  width: 201px;
+  @include centers;
+  @include sapphire-button;
+}

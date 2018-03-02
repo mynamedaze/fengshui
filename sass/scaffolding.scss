@@ -1,0 +1,145 @@
+html {
+  font-size: 0.625rem;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: $links-color;
+  font-family: $font-main;
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+}
+a:hover {
+  color: $links-color--hover;
+}
+strong {
+  font-weight: 700;
+}
+.semibold {
+  font-weight: 600;
+}
+div,
+article,
+section,
+ul,
+li {
+  box-sizing: border-box;
+}
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+body {
+  font-family: $font-main;
+  font-weight: 300;
+  margin: 0px;
+  color: $text-main-color;
+  background-color: $main-bg;
+  transition: all 0.2s ease 0s;
+  @media #{$max-mobile-width} {
+    background: rgb(0,8,14);
+    background: url("../img/bg--mobile.jpg"), -moz-linear-gradient(left, rgba(0,8,14,1) 0%, rgba(0,8,14,1) 100%);
+    background: url("../img/bg--mobile.jpg"), -webkit-linear-gradient(left, rgba(0,8,14,1) 0%,rgba(0,8,14,1) 100%);
+    background: url("../img/bg--mobile.jpg"), linear-gradient(to right, rgba(0,8,14,1) 0%,rgba(0,8,14,1) 100%);
+    background-position: center 0, center;
+    background-size: cover;
+  }
+  @media #{$min-tablet-width} {
+    background: rgb(0,8,14);
+    background: url("../img/bg--tablet.jpg"), -moz-linear-gradient(left, rgba(0,8,14,1) 0%, rgba(0,8,14,1) 100%);
+    background: url("../img/bg--tablet.jpg"), -webkit-linear-gradient(left, rgba(0,8,14,1) 0%,rgba(0,8,14,1) 100%);
+    background: url("../img/bg--tablet.jpg"), linear-gradient(to right, rgba(0,8,14,1) 0%,rgba(0,8,14,1) 100%);
+    background-position: center 0, center;
+    background-size: cover;
+  }
+  @media #{$min-desktop-width} {
+    background: rgb(0,8,14);
+    background: url("../img/bg--desktop.jpg"), -moz-linear-gradient(left, rgba(0,8,14,1) 0%, rgba(0,8,14,1) 100%);
+    background: url("../img/bg--desktop.jpg"), -webkit-linear-gradient(left, rgba(0,8,14,1) 0%,rgba(0,8,14,1) 100%);
+    background: url("../img/bg--desktop.jpg"), linear-gradient(to right, rgba(0,8,14,1) 0%,rgba(0,8,14,1) 100%);
+    background-position: center 0, center;
+    background-size: cover;
+  }
+}
+input,
+textarea,
+select {
+  font-family: $font-main;
+  box-sizing: border-box;
+  @media #{$max-mobile-width} {
+    border-radius: 5px;
+  }
+  @media #{$min-tablet-width} {
+    border-radius: 5px;
+  }
+  @media #{$min-desktop-width} {
+    border-radius: 5px;
+  }
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder,
+select::-moz-placeholder {
+  color: $placeholder-color;
+ }
+ input::-webkit-input-placeholder,
+ textarea::-webkit-input-placeholder,
+ select::-webkit-input-placeholder { color: $placeholder-color; }
+
+ input:-ms-input-placeholder,
+ textarea:-ms-input-placeholder,
+ select:-ms-input-placeholder { color: $placeholder-color; }
+
+ input::-ms-input-placeholder,
+ textarea::-ms-input-placeholder,
+ select::-ms-input-placeholder { color: $placeholder-color; }
+
+ input::placeholder,
+ textarea::placeholder,
+ select::placeholder { color: $placeholder-color; }
+input[type="submit"] {
+  cursor: pointer;
+}
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+input:focus {
+  outline-width: 0;
+  outline: none;
+}
+button {
+  font-family: $font-main;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+button:focus {
+  outline-width: 0;
+  outline: none;
+}
+label {
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.clearfix::after { 
+  content: ""; /* Генерируем пустой элемент */
+  clear: both; /* Отменяем обтекание*/
+  display: block; /* Блочный элемент */
+}
+.disable {
+  display: none !important;
+}

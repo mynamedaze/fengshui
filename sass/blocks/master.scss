@@ -1,0 +1,127 @@
+.master {
+  overflow: hidden;
+}
+.master__wrapper {
+  @include section-width;
+  @include paddings;
+  background-repeat: no-repeat;
+  @media #{$max-mobile-width} {
+    background-position: center 40px;
+    background-size: 488px 465px;
+    background-image: url("/img/kids--mobile.png");
+    padding-top: 45px;
+  }
+  @media #{$min-tablet-width} {
+    padding-top: 52px;
+    padding-bottom: 300px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 100px;
+    padding-bottom: 400px
+  }
+}
+.master__content {
+  @media #{$max-mobile-width} {
+  }
+  @media #{$min-tablet-width} {
+    position: relative;
+    width: 65%;
+  }
+  @media #{$min-desktop-width} {
+    margin-left: 79px;
+    width: 37%;
+  }
+}
+.master__content::after {
+  @media #{$min-tablet-width} {
+    z-index: 1;
+    position: absolute;
+    content: "";
+    right: -550px;
+    top: -5px;
+    width: 883px;
+    height: 812px;
+    background-position: center;
+    background-size: 100% auto;
+    background-image: url("/img/kids--tablet.png");
+  }
+  @media #{$min-desktop-width} {
+    right: -550px;
+    width: 1336px;
+    height: 1092px;
+    top: -154px;
+    right: -1100px;
+    background-position: center;
+    background-size: 100% auto;
+    background-image: url("/img/kids--desktop.png");
+  }
+}
+.master__title {
+  text-align: center;
+  color: #0fefde;
+  margin-top: 0;
+  @media #{$max-mobile-width} {
+    font-size: 2.8rem;
+    margin-bottom: 245px;
+  }
+  @media #{$min-tablet-width} {
+    position: relative;
+    z-index: 4;
+    font-size: 4rem;
+    margin-bottom: 40px;
+  }
+}
+.master__title-text {
+  position: relative;
+}
+.master__title-text::before {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url("/img/icon_masters.svg");
+  @media #{$max-mobile-width} {
+    left: -43px;
+    top: 10px;
+    width: 34px;
+    height: 16px;
+  }
+  @media #{$min-tablet-width} {
+    left: -70px;
+    top: 13px;
+    width: 59px;
+    height: 28px;
+  }
+}
+.master__paragraph {
+  @media #{$max-mobile-width} {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+  }
+  @media #{$min-tablet-width} {
+    position: relative;
+    z-index: 4;
+    font-size: 1.7rem;
+    line-height: 2.7rem;
+  }
+}
+.master__catalog-btn-field {
+  @include centers;
+  @media #{$max-mobile-width} {
+    max-width: 294px;
+    margin-top: 48px;
+  }
+  @media #{$min-tablet-width} {
+    position: relative;
+    z-index: 4;
+    width: 294px;
+    margin-top: 42px;
+  }
+}
+.master__catalog-btn {
+  display: block;
+  @include centers;
+  @include sapphire-button;
+  width: 100%;
+}

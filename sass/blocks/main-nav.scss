@@ -1,0 +1,33 @@
+.main-nav {
+  @media #{$max-mobile-width} {
+    display: none;
+  }
+  @media #{$min-tablet-width} {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
+.main-nav__list {
+  padding-left: 0;
+  display: flex;
+}
+.main-nav__item {
+  @media #{$min-tablet-width} {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  @media #{$min-desktop-width} {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+.main-nav__item:last-child {
+  @media #{$min-tablet-width} {
+    @media #{$max-nav-width} {
+      display: none;
+    }
+  }
+}

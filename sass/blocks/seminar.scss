@@ -1,0 +1,195 @@
+.seminar {
+  padding-top: 40px;
+  position: relative;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  @media #{$max-mobile-width} {
+    background-size: auto 90%;
+    background-position: center 0;
+    background-image: url("/img/clouds--mobile.png");
+    padding-top: 230px;
+    padding-bottom: 85px;
+    margin-top: -85px;
+  }
+  @media #{$min-tablet-width} {
+    background-size: 100% 90%;
+    background-position: center 0;
+    background-image: url("/img/clouds--tablet.png");
+    padding-top: 230px;
+    padding-bottom: 100px;
+    margin-top: -385px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 215px;
+    padding-bottom: 135px;
+    margin-top: -485px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+  }
+  @media #{$min-desktop-width} {
+    @media #{$max-desktop-width} {
+      background-image: url("/img/clouds--desktop.png");
+    }
+  }
+  @media #{$min-4k-width} {
+    background-image: url("/img/clouds--4k.png");
+    background-size: auto 100%;
+  }
+}
+.seminar__wrapper {
+  @include section-width;
+  @include paddings--no-mobile;
+  @media #{$min-desktop-width} {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.seminar__layer {
+  background-color: $layer-color;
+  border-radius: 15px;
+  color: #000;
+  position: relative;
+  @media #{$max-mobile-width} {
+    @include centers;
+  }
+  @media #{$min-tablet-width} {
+    @media #{$max-tablet-width} {
+      margin-left: 72px;
+      margin-right: 72px;
+    }
+  }
+  @media #{$min-desktop-width} {
+    width: 573px;
+    margin-right: -25px;
+  }
+}
+.seminar__layer::before {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url("/img/dots_3.svg");
+  position: absolute;
+  content: "";
+  z-index: 3;
+  width: 204px;
+  height: 204px;
+  @media #{$max-mobile-width} {
+    top: -62px;
+    left: 14px;
+  }
+  @media #{$min-tablet-width} {
+    top: -84px;
+    right: -38px;
+  }
+  @media #{$min-desktop-width} {
+    top: -77px;
+    right: -92px;
+  }
+}
+.seminar__layer::after {
+  position: absolute;
+  content: "";
+  z-index: 2;
+  border-radius: 15px;
+  width: 100%;
+  background-color: $layer-color;
+  @media #{$max-mobile-width} {
+    height: 115%;
+    right: -27px;
+    top: -37px;
+  }
+  @media #{$min-tablet-width} {
+    height: 100%;
+    right: -69px;
+    top: -29px;
+  }
+}
+.seminar__content {
+  background-color: #fff;
+  border-radius: 15px;
+  position: relative;
+  z-index: 4;
+  @media #{$max-mobile-width} {
+    padding-top: 40px;
+    padding-bottom: 38px;
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+  @media #{$min-tablet-width} {
+    padding-top: 62px;
+    padding-bottom: 60px;
+    padding-left: 58px;
+    padding-right: 58px;
+  }
+}
+.seminar__title {
+  color: #222222;
+  margin-top: 0;
+  @media #{$max-mobile-width} {
+    font-size: 2.8rem;
+  }
+  @media #{$min-tablet-width} {
+    position: relative;
+    z-index: 4;
+    font-size: 4rem;
+  }
+}
+.seminar__title-text {
+  position: relative;
+  @media #{$max-mobile-width} {
+    padding-left: 45px;
+  }
+  @media #{$min-tablet-width} {
+    padding-left: 43px;
+  }
+}
+.seminar__title-text::before {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url("/img/icon_seminar.svg");
+  @media #{$max-mobile-width} {
+    left: 10px;
+    top: 7px;
+    width: 25px;
+    height: 23px;
+  }
+  @media #{$min-tablet-width} {
+    left: 0px;
+    top: 10px;
+    width: 34px;
+    height: 31px;
+  }
+}
+.seminar__paragraph {
+  @media #{$max-mobile-width} {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 1.7rem;
+    line-height: 2.7rem;
+  }
+}
+.seminar__catalog-btn-field {
+  @include centers;
+  @media #{$max-mobile-width} {
+    max-width: 294px;
+    margin-top: 48px;
+  }
+  @media #{$min-tablet-width} {
+    position: relative;
+    z-index: 4;
+    width: 294px;
+    margin-top: 42px;
+  }
+}
+.seminar__catalog-btn {
+  display: block;
+  @include centers;
+  @include sapphire-button;
+  width: 100%;
+}

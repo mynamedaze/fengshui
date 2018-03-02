@@ -1,0 +1,125 @@
+.consult {
+  overflow: hidden;
+  @media #{$max-mobile-width} {
+    padding-bottom: 61px;
+  }
+  @media #{$min-tablet-width} {
+    padding-bottom: 278px;
+  }
+  @media #{$min-desktop-width} {
+    padding-bottom: 274px;
+  }
+}
+.consult__wrapper {
+  @include section-width--no-mobile;
+  @include paddings;
+  position: relative;
+}
+.consult__wrapper::after {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+  @media #{$max-mobile-width} {
+    top: 0;
+    left: 50%;
+    width: 711px;
+    height: 454px;
+    background-image: url("/img/couple--mobile.png");
+    transform: translateX(-215px);
+  }
+  @media #{$min-tablet-width} {
+    top: 0;
+    right: -300px;
+    width: 1094px;
+    height: 699px;
+    background-image: url("/img/couple--tablet.png");
+  }
+  @media #{$min-desktop-width} {
+    top: 60px;
+    background-image: url("/img/couple--desktop.png");
+  }
+}
+.consult__title {
+  text-align: center;
+  color: #0fefde;
+  margin-top: 0;
+  @media #{$max-mobile-width} {
+    font-size: 2.8rem;
+    margin-bottom: 290px;
+  }
+  @media #{$min-tablet-width} {
+    position: relative;
+    z-index: 4;
+    font-size: 4rem;
+    margin-bottom: 62px;
+  }
+}
+.consult__title-text {
+  position: relative;
+}
+.consult__title-text::before {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url("/img/icon_personal.svg");
+  @media #{$max-mobile-width} {
+    left: -30px;
+    top: 5px;
+    width: 23px;
+    height: 22px;
+  }
+  @media #{$min-tablet-width} {
+    left: -40px;
+    top: 9px;
+    width: 29px;
+    height: 28px;
+  }
+}
+.consult__content {
+  position: relative;
+  z-index: 4;
+  @media #{$max-mobile-width} {
+    max-width: $max-mobile-wrapper;
+    @include centers;
+  }
+  @media #{$min-tablet-width} {
+    width: 65%;
+  }
+  @media #{$min-desktop-width} {
+    width: 467px;
+    margin-left: 79px;
+  }
+}
+.consult__paragraph {
+  @media #{$max-mobile-width} {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 1.7rem;
+    line-height: 2.7rem;
+  }
+}
+.consult__catalog-btn-field {
+  @include centers;
+  @media #{$max-mobile-width} {
+    max-width: 294px;
+    margin-top: 48px;
+  }
+  @media #{$min-tablet-width} {
+    position: relative;
+    z-index: 4;
+    width: 294px;
+    margin-top: 54px;
+  }
+}
+.consult__catalog-btn {
+  display: block;
+  @include centers;
+  @include sapphire-button;
+  width: 100%;
+}

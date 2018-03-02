@@ -1,0 +1,217 @@
+.popup-consult {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  display: none;
+  @media #{$max-mobile-width} {
+    left: 0px;
+  }
+  @media #{$min-tablet-width} {
+    width: 468px;
+    left: 50%;
+    transform: translateX(-234px);
+  }
+  @media #{$min-desktop-width} {
+    width: 684px;
+    transform: translateX(-342px);
+  }
+}
+.popup-consult__close-btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  background-image: url("/img/close.svg");
+  border-radius: 50%;
+  background-color: transparent;
+  border: 0 solid transparent;
+  z-index: 12;
+  @media #{$max-mobile-width} {
+    right: 25px;
+    top: 25px;
+  }
+  @media #{$min-tablet-width} {
+    right: -30px;
+    top: 35px;
+  }
+}
+.popup-consult__close-btn:hover {
+  background-color: #0fefde;
+}
+.popup-consult__wrapper {
+  @include popup;
+  width: 100%;
+  @media #{$max-mobile-width} {
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 55px;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: 70px;
+    border-radius: 5px;
+    padding-top: 50px;
+    padding-bottom: 75px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 54px;
+    padding-bottom: 85px;
+  }
+}
+.popup-consult__title {
+  text-align: center;
+  color: #0fefde;
+  margin-top: 0;
+  box-sizing: border-box;
+  @media #{$max-mobile-width} {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 3rem;
+    max-width: 248px;
+    @include centers;
+  }
+  @media #{$min-tablet-width} {
+    position: relative;
+    z-index: 4;
+    font-size: 3rem;
+    margin-bottom: 40px;
+  }
+}
+.popup-consult__title-text {
+  position: relative;
+}
+.popup-consult__title-text::before {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url("/img/phone_icon.svg");
+  @media #{$max-mobile-width} {
+    left: -30px;
+    top: 9px;
+    width: 19px;
+    height: 19px;
+  }
+  @media #{$min-tablet-width} {
+    left: -35px;
+    top: 5px;
+    width: 25px;
+    height: 25px;
+  }
+}
+.popup-consult__form {
+  @include centers;
+  @media #{$max-mobile-width} {
+    max-width: 248px;
+    margin-top: 60px;
+  }
+  @media #{$min-tablet-width} {
+    width: 248px;
+  }
+  @media #{$min-desktop-width} {
+    width: 511px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.popup-consult__input {
+  display: block;
+  @include input;
+  margin-top: 20px;
+  background-repeat: no-repeat;
+  @media #{$min-desktop-width} {
+    width: 248px
+  }
+}
+.popup-consult__input--name {
+  background-image: url("/img/icon_name.svg");
+  background-size: 13px 14px;
+  background-position: 26px 18px;
+}
+.popup-consult__input--phone {
+  background-image: url("/img/icon_phone.svg");
+  background-size: 13px 13px;
+  background-position: 26px 19px;
+}
+.popup-consult__input--mail {
+  background-image: url("/img/mail_icon.svg");
+  background-size: 16px 11px;
+  background-position: 24px 20px;
+}
+.popup-consult__input--date {
+  background-image: url("/img/mail_icon.svg");
+  background-size: 15px 14px;
+  background-position: 24px 20px;
+}
+.popup-consult__select {
+  display: block;
+  @include input;
+  margin-top: 20px;
+  background-repeat: no-repeat;
+}
+.popup-consult__select--consult {
+  background-image: url("/img/talk_icon.svg");
+  background-size: 16px 16px;
+  background-position: 24px 18px;
+}
+.popup-consult__submit-field {
+  @media #{$min-desktop-width} {
+    width: 248px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+.popup-consult__submit {
+  @include sapphire-button;
+  width: 100%;
+  display: block;
+  @media #{$max-mobile-width} {
+    margin-top: 35px;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: 37px;
+  }
+}
+.popup-consult__confid-label {
+  font-size: 1.4rem;
+  color: #949494;
+  position: relative;
+  display: block;
+  padding-left: 22px;
+  margin-top: 22px;
+}
+.popup-consult__confid-link {
+  color: #949494;
+  text-decoration: underline;
+}
+.popup-consult__confid-label::before {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 13px;
+  top: 0;
+  left: 0;
+  background-color: #2e6763;
+  border-radius: 2px;
+}
+.popup-consult__confid-check {
+  display: none;
+}
+#popup-consult-confid-check:checked ~ .popup-consult__confid-label::after {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 5px;
+  left: 3px;
+  top: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url("/img/checker.svg");
+}
